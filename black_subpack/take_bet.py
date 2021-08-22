@@ -3,7 +3,7 @@ def take_bet(chips):
     while True :
         try : 
 
-            chips.bet = int(input("Amout you want to bet : "))
+            chips.bet = int(input("Amount you want to bet : "))
 
         except:
 

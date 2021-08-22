@@ -38,9 +38,6 @@ class Deck:
     def deal(self):
        single_card = self.full_deck.pop()
        return single_card
-        # b = self.full_deck.pop(0)
-
-        # return [a, b]
 
 
 class Hand:
@@ -48,31 +45,38 @@ class Hand:
     def __init__(self):
         self.cards = []
         self.value = 0
+        self.aces = 0
 
     def add_card(self,card):
         self.cards.append(card)
         self.value += value[card.rank]
 
+        if card.rank == 'Ace':
+            self.aces += 1
+
     def clear_hand(self):
         self.cards.clear()
 
-    # def adjust_for_aces(self):
+    def adjust_for_aces(self):
+        if self.value > 21 and self.aces:
+            self.value -= 10
+            self.aces -= 1
     #     if self.cards[-1].value == 11:
     #         self.cards[-1].value = 1
 
 
 
-# class Chips:
+class Chips:
 
-#     def __init__(self,total):
-#         self.total = total
-#         self.bet = 0
+    def __init__(self,total):
+        self.total = total
+        self.bet = 0
 
-#     def bet_won(self):
-#         self.total += (self.bet * 1.5) 
+    def bet_won(self):
+        self.total += (self.bet * 1.5) 
 
-#     def bet_lost(self):
-#         self.total-=self.bet
+    def bet_lost(self):
+        self.total-=self.bet
 
 
 
@@ -86,13 +90,3 @@ class Hand:
 
 # dealers = hand()
 # dealers.add_card(cards.deal())
-
-deck = Deck()
-deck.shuffle()
-
-player = Hand()
-temp = deck.deal()
-
-player.add_card(temp)
-
-print(player.cards)
