@@ -1,6 +1,6 @@
-# from Projects.Blackjack.black_subpack import *
+from Projects.Blackjack.black_subpack.take_hit import take_hit
+from Projects.Blackjack.black_subpack import *
 import random
-from typing import ValuesView
 
 suits = ('Hearts', 'Spades', 'Diamond', 'Clubs')
 ranks=('Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Jack','Queen','King','Ace')
@@ -78,15 +78,19 @@ class Chips:
     def bet_lost(self):
         self.total-=self.bet
 
+while True:
 
+    print("Welcome to Blackjack/21 Game.\nThis a purely Terminal based game.")
 
-# while True:
+    deck = Deck() #Creating a deck object of the class Deck
+    deck.shuffle() #Shuffling the deck of cards
 
-# cards = Deck()
-# cards.shuffle()
+    players_hand = Hand()
+    dealers_hand = Hand()
 
-# players = hand()
-# players.add_card(cards.deal())
+    for _ in range(2):
+        take_hit(players_hand,deck)
+        take_hit(dealers_hand,deck)
 
-# dealers = hand()
-# dealers.add_card(cards.deal())
+    total_amount = int(input("Enter the total amount of money to place: "))
+    players_chip = Chips(total_amount)
