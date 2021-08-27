@@ -1,5 +1,4 @@
-from Projects.Blackjack.black_subpack.take_hit import take_hit
-
+from .take_hit import take_hit
 
 def hit_or_stand(player,deck):
 
