@@ -81,10 +81,9 @@ class Chips:
         self.total-=self.bet
 
 
+print("Welcome to Blackjack/21 Game.\nThis a purely Terminal based game.")
 
 while True:
-
-    print("Welcome to Blackjack/21 Game.\nThis a purely Terminal based game.")
 
     deck = Deck() #Creating a deck object of the class Deck
     deck.shuffle() #Shuffling the deck of cards
@@ -110,7 +109,8 @@ while True:
     while True:
 
         #Asking player if he/she want to stand or hit
-        hit_or_stand(players_hand,deck)
+        if players_hand.value < 21:
+            hit_or_stand(players_hand,deck)
 
         #show all the cards of players hand but keeping one card hidden in dealers hand
         show_some(players_hand,dealers_hand)
@@ -161,7 +161,7 @@ while True:
                 break
 
         
-    play_again = input("Do you want to play again? \nType 'y' or 'n': ")
+    play_again = input("\nDo you want to play again? \nType 'y' or 'n': ")
 
     if play_again[0].lower() == 'y':
         continue
