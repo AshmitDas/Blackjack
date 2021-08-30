@@ -11,3 +11,4 @@ def dealer_busts(player, dealer, chips):
         print("So, Dealer busts!")
 
     chips.bet_won()
+    print(f"\nThe Total amount the player placed is {chips.const_total}.\nThe current amount of the player is {chips.total}.")

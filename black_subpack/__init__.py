@@ -8,3 +8,8 @@ from .show_all import show_all
 from .show_some import show_some
 from .take_bet import take_bet
 from .take_hit import take_hit
+from .class_Card import Card
+from .class_Deck import Deck
+from .class_Chip import Chips
+from .class_Hand import Hand
+from .screen_clear import clear
