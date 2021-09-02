@@ -7,16 +7,20 @@ while True:
     deck =  Deck()  #Creating a deck object of the class Deck
     deck.shuffle() #Shuffling the deck of cards
 
+
     players_hand = Hand()
     dealers_hand = Hand()
-
-    for _ in range(2):
-        take_hit(players_hand,deck)
-        take_hit(dealers_hand,deck)
 
     # Prompting player to enter total amount 
     total_amount = int(input("Enter the total amount of money to place: "))
     players_chip = Chips(total_amount)
+
+    print("Drawing cards to player and dealer.")
+    delay()
+
+    for _ in range(2):
+        take_hit(players_hand,deck)
+        take_hit(dealers_hand,deck)
 
 
     #Taking players bet amount

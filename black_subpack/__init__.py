@@ -13,3 +13,4 @@ from .class_Deck import Deck
 from .class_Chip import Chips
 from .class_Hand import Hand
 from .screen_clear import clear
+from .sleep import delay
