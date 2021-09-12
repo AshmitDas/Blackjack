@@ -3,4 +3,4 @@
 Source: [Wikipedia](https://en.wikipedia.org/wiki/Blackjack).
 
 **To know the rules of the game click on the following link.** 
-<p>[Rules](https://www.blackjackapprenticeship.com/how-to-play-blackjack/) 
+<p> [Rules](https://www.blackjackapprenticeship.com/how-to-play-blackjack/) 
